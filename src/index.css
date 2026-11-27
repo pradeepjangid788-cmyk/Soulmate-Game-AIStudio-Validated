@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #120308;
+    color: #fff6e0;
+    font-family: var(--font-sans);
+    overscroll-behavior: none;
+  }
+}
+
+.royal-damask-bg {
+  background-color: #18050b;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 18%, rgba(120, 22, 48, 0.42) 0%, rgba(24, 5, 11, 0.92) 70%, #120308 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(244, 198, 104, 0.018) 0px,
+      rgba(244, 198, 104, 0.018) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(244, 198, 104, 0.018) 0px,
+      rgba(244, 198, 104, 0.018) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(180deg, #fff3c4 0%, #f4c668 48%, #c9922c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.75));
+}
+
+.ride-blend-mask {
+  -webkit-mask-image: radial-gradient(ellipse 88% 84% at 50% 50%, #000 58%, transparent 98%);
+  mask-image: radial-gradient(ellipse 88% 84% at 50% 50%, #000 58%, transparent 98%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
